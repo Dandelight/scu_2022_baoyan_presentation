@@ -1,0 +1,168 @@
+\mode<presentation>
+
+% ~~~~~~~~~
+% ~ Theme ~
+% ~~~~~~~~~
+\usepackage{theme/material_colors}
+\usepackage{theme/beamerinnerthemematerial}
+\usepackage{theme/beamerouterthemematerial}
+\usepackage{theme/beamercolorthemematerial}
+
+
+% Customize list appearance
+\newcommand{\myitem}{\item[\textcolor{primary-color-text}\textbullet]}
+
+% Add command to add source for pictures (credits)
+\newcommand{\source}[1]{\begin{textblock*}{4cm}(1cm,8cm)
+	\begin{beamercolorbox}[ht=0.5cm,left]{imagesource}
+			\usebeamerfont{imagesource}\usebeamercolor[fg]{imagesource} Source: {#1}
+	\end{beamercolorbox}
+\end{textblock*}}
+
+
+% Create a side by side slide with arguments:
+% #1: optional argument specifying the ratio
+% #2: left side content
+% #3: right side content
+% #4: left side tcolorbox options
+% #5: right side tcolorbox options
+\newcommand{\sidebysideleft}[5][0.49]{
+  \begin{minipage}[t]{#1\textwidth}
+		\begin{tcolorbox}[
+			enhanced,
+			colback=primary-color,
+			coltext=primary-color-text,
+			sharp corners,
+			boxrule=0mm,
+			toprule=-0.4mm,
+			bottomrule=-1.1mm,
+			leftrule=-10mm,
+			left=6mm, right=6mm, top=2.6mm, bottom=2mm, % text padding
+			fuzzy shadow={0mm}{-0.4mm}{-1mm}{0.2mm}{fill=shadow!40!bgcolor-03},
+			width=\textwidth,
+			height=\textheight, #4]
+			#2
+		  \end{tcolorbox}
+	\end{minipage}
+	\noindent
+	\begin{minipage}[t]{\dimexpr0.99\textwidth - #1\textwidth}
+		\begin{tcolorbox}[
+			empty,
+			coltext=secondary-color-text,
+			sharp corners,
+			boxrule=0mm,
+			toprule=-0.4mm,
+			bottomrule=-1.1mm,
+			rightrule=-15mm,
+			left=6mm, right=6mm, top=2.6mm, bottom=2mm, % text padding
+			width=\textwidth,
+			height=\textheight, #5]
+			#3
+		  \end{tcolorbox}
+	\end{minipage}
+}
+\newcommand{\sidebysideright}[5][0.49]{
+  \begin{minipage}[t]{\dimexpr0.99\textwidth - #1\textwidth}
+		\begin{tcolorbox}[
+			empty,
+			coltext=secondary-color-text,
+			sharp corners,
+			boxrule=0mm,
+			toprule=-0.4mm,
+			bottomrule=-1.1mm,
+			leftrule=-10mm,
+			left=6mm, right=6mm, top=2.6mm, bottom=2mm, % text padding
+			width=\textwidth,
+			height=\textheight, #4]
+			#2
+		  \end{tcolorbox}
+	\end{minipage}
+	\noindent
+	\begin{minipage}[t]{#1\textwidth}
+		\begin{tcolorbox}[
+			enhanced,
+			colback=primary-color,
+			coltext=primary-color-text,
+			sharp corners,
+			boxrule=0mm,
+			toprule=-0.4mm,
+			bottomrule=-1.1mm,
+			rightrule=-15mm,
+			left=6mm, right=6mm, top=2.6mm, bottom=2mm, % text padding
+			fuzzy shadow={0mm}{-0.4mm}{-1mm}{0.2mm}{fill=shadow!40!bgcolor-03},
+			width=\textwidth,
+			height=\textheight, #5]
+			#3
+		  \end{tcolorbox}
+	\end{minipage}
+}
+
+
+% Create a new topic-introduction frame with primary background color and the topic name as title (given as argument)
+\newcommand{\topicFramePrimary}[2][\unskip]{
+	{
+		\colorlet{bgcolor-03}{primary-color}
+		\colorlet{secondary-color-text}{primary-color-text}
+		\usebeamercolor*{normal text}
+		\begin{frame}
+			\begin{center}
+				{\LARGE#2}
+				\ifx\hfuzz#1\hfuzz
+				% EMPTY
+				\else
+				\\
+				\vspace{1em}
+				#1%
+				\fi
+			\end{center}
+		\end{frame}
+	}
+}
+\newcommand{\topicFrameSecondary}[2][\unskip]{
+	{
+		\colorlet{bgcolor-03}{secondary-color}
+		\usebeamercolor*{normal text}
+		\begin{frame}
+			\begin{center}
+				{\LARGE#2}
+				\ifx\hfuzz#1\hfuzz
+				% EMPTY
+				\else
+				\\
+				\vspace{1em}
+				#1%
+				\fi
+			\end{center}
+		\end{frame}
+	}
+}
+
+
+% ~~~~~~~~~~~~~~~~~~~~
+% ~ Default Settings ~
+% ~~~~~~~~~~~~~~~~~~~~
+
+\directlua{
+	local settings = require("theme/settings")
+	local Utils = require("theme/Utils")
+
+	Utils.defineHTMLColor("primary-color", settings.PrimaryColor)
+	Utils.defineHTMLColor("primary-color-light", settings.PrimaryColorLight)
+	Utils.defineHTMLColor("primary-color-dark", settings.PrimaryColorDark)
+	Utils.defineHTMLColor("primary-color-text", settings.PrimaryTextColor)
+	Utils.defineHTMLColor("secondary-color", settings.SecondaryColor)
+	Utils.defineHTMLColor("secondary-color-light", settings.SecondaryColorLight)
+	Utils.defineHTMLColor("secondary-color-dark", settings.SecondaryColorDark)
+	Utils.defineHTMLColor("secondary-color-text", settings.SecondaryTextColor)
+	Utils.defineHTMLColor("accent-color", settings.AccentColor)
+	Utils.defineHTMLColor("shadow", settings.Shadow)
+	Utils.defineHTMLColor("bgcolor-01", settings.BackgroundColor1)
+	Utils.defineHTMLColor("bgcolor-02", settings.BackgroundColor2)
+	Utils.defineHTMLColor("bgcolor-03", settings.BackgroundColor3)
+	Utils.defineHTMLColor("bgcolor-04", settings.BackgroundColor4)
+}
+
+
+\setbeamercolor*{alerted text}{fg=accent-color,bg=bgcolor-01}
+
+\mode<all>

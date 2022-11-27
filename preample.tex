@@ -1,0 +1,78 @@
+% LTeX: enabled=false
+\documentclass[lualatex,aspectratio=169,serif]{beamer}
+
+% ~~~~~~~~~~~~~~~~~~~~~
+% ~ Required packages ~
+% ~~~~~~~~~~~~~~~~~~~~~
+\usepackage[noindent,UTF8]{ctexcap}
+% Theme
+\usepackage{theme/beamerthemematerial}
+% Roboto font
+\usepackage{fontspec}
+\usepackage[sfdefault]{roboto}
+% Language specific typesetting rules
+\usepackage[english]{babel}
+% Required for source/credits below pictures
+\usepackage[absolute,overlay]{textpos}
+% For colorful layouts
+\usepackage{xcolor, etoolbox, xstring}
+\usepackage{tikz,tcolorbox}
+\usetikzlibrary{shapes,calc}
+\tcbuselibrary{skins}
+
+\setbeamertemplate{theorems}[numbered]
+\definecolor{myblue}{rgb}{0.15,0.15,0.53}
+
+% 1- Block title (background and text)
+\setbeamercolor{block title example}{fg=white, bg=teal}
+% 2- Block body (background and text)
+\setbeamercolor{block body example}{ bg=teal!25}
+% Change alert block colors
+% 1- Block title (background and text)
+\setbeamercolor{block title alerted}{fg=white, bg=orange}
+% 2- Block body (background and text)
+\setbeamercolor{block body alerted}{ bg=orange!25}
+% Change standard block colors
+% 1- Block title (background and text)
+\setbeamercolor{block title}{bg=cyan, fg=white}
+% 2- Block body (background)
+\setbeamercolor{block body}{bg=cyan!10}
+
+\setCJKsansfont[ItalicFont=KaiTi]{Microsoft Yahei}
+\renewcommand{\CJKfamilydefault}{\CJKsfdefault}
+
+\makeatother
+
+% ~~~~~~~~~~~~~~~~~~~~~~~
+% ~ Additional packages ~
+% ~~~~~~~~~~~~~~~~~~~~~~~
+\usepackage{csquotes}
+\usepackage{listings}
+
+
+% ~~~~~~~~~~~~~~~~~~~~~
+% ~ Required packages ~
+% ~~~~~~~~~~~~~~~~~~~~~
+\usepackage{hyperref}
+
+% ~~~~~~~~~~~~~~~~~~~~~~~
+% ~ Theme configuration ~
+% ~~~~~~~~~~~~~~~~~~~~~~~
+% \beamertemplatenavigationsymbolsempty
+\setbeamertemplate{navigation symbols}{}
+\addtobeamertemplate{navigation symbols}{%
+    \usebeamerfont{footline}%
+    \usebeamercolor[fg]{footline}%
+	% \strut
+	\inserttitle
+	\hspace{1em}
+	\insertsubtitle
+	\hspace{1em}
+	% \insertshortinstitute
+	\insertinstitute
+	\hspace{1em}
+	\insertauthor
+	\hspace{1em}
+    \insertframenumber/\inserttotalframenumber
+}{}
+% LTex: enabled=true

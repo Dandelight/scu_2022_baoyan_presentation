@@ -1,0 +1,494 @@
+\input{preample}
+\usepackage{pgf-pie} % the package used to implement the pie charts
+
+\definecolor{Accent}{HTML}{1976D2}
+\renewcommand{\emph}[1]{{\color{Accent}{\textbf{#1}}}}
+
+\title{学习与保研经验分享}
+\subtitle{CCF川大分会``对话菁英''经验交流活动}
+\date{2022年11月13日}
+\author[R. Guo]{郭睿明}
+\institute[SCU]{四川大学 计算机学院}
+
+\begin{document}
+
+% ~~~~~~~~~~~~~~~~~~~~~~~
+% ~ Presentation slides ~
+% ~~~~~~~~~~~~~~~~~~~~~~~
+
+\begin{frame}
+	\titlepage
+\end{frame}
+
+{
+% Link colors are rendered with `AccentColor'
+% Change the AccentColor temporarily to match the background
+\colorlet{accent-color}{secondary-color-text}
+\begin{frame}{目录}
+	\tableofcontents
+\end{frame}
+}
+
+\begin{frame}
+	\frametitle{免责声明}
+	\framesubtitle{Disclaimer}
+	\centering
+	本宣讲中的内容\emph{仅为2022年}四川大学计算机学院参与保研的学生的经验总结，不代表理解全面准确，也不代表之后年份的情况会完全相同，仅供参考。一切事宜以学院、学校解释为准。
+\end{frame}
+
+\begin{frame}
+	\frametitle{为什么要读研}
+
+	\begin{itemize}
+		\item 对学术的热爱
+		\item 提升自身实力
+		\item 社会对学位的认可与要求
+	\end{itemize}
+
+\end{frame}
+
+\section{保研流程}
+\topicFramePrimary{保研流程}
+\begin{frame}{保研是什么}
+	% 因为现场考虑到大一新生，可能入校前后已经或多或少听说过了，这里简单带过一下
+	保研全称\emph{推荐优秀应届本科毕业生免试攻读硕士学位研究生}，
+	本科学生可以通过成绩评定、综合排名等形式，获得推免资格，不经过考研（全国硕士研究生统一招生考试）而直接被高校录取为研究生。
+
+	% 前一位考研的学长可以成功上岸非常优秀，但是保研还是一个更推荐的选项，为什么呢，
+	保研有以下优势：
+	\begin{itemize}
+		\item 更广的选择面：从4-5月一直到9月总有机会获得接受资格；可以报名多所院校的选拔
+		\item 节约时间：保研结果在9月底尘埃落定，大四有充足的自由时间
+		\item 提前联系导师：提前``占坑''，获得更优质的指导
+		\item 直博：只有保研学生可以申请直博，免去了硕士的毕业事务
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\frametitle{保研流程}
+	\framesubtitle{以及各方关系}
+	保研涉及三方：
+
+	\begin{itemize}
+		\item \emph{学生}；
+		\item \emph{推荐院校}，即学生本科就读院校；
+		\item \emph{接收院校}，即学生意向研究生院校。
+	\end{itemize}
+	后两者可能相同。
+
+	\begin{itemize}
+		\item 表面的流程是：本科院校推荐 $\rightarrow$ 统一报名 $\rightarrow$ 接收院校考核
+		\item 实际的流程是：接收院校夏令营（5-8月） $\rightarrow$ 接收院校``预推免''（8-9月）$\rightarrow$ 推荐院校进行``综测''，学生获得保研名额（9月开学后）$\rightarrow$ 学生在系统中填报，接收院校在系统中接收（9月28日）
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\frametitle{问题分解}
+	所以保研问题就是三者之间的关系问题：
+	\begin{itemize}
+		\item 学生-推荐院校：在综测排名中拔得头筹
+		\item 学生-接收院校：在夏令营/预推免中脱颖而出
+		\item 推荐院校-接受院校：档案交接等
+	\end{itemize}
+	% 其中推荐院校和接受院校的关系一部分还是需要我们亲力亲为的，比如成绩单、推荐信等申请材料的递交
+\end{frame}
+
+\section{推荐院校}
+\topicFramePrimary{推荐院校}
+
+\begin{frame}
+	\frametitle{计算机学院推荐政策（2022年）}
+	\begin{columns}
+		\begin{column}{0.4\linewidth}
+			\begin{itemize}
+				\item \emph{课程成绩}
+				      \begin{equation}
+					      0.6\times \frac{\sum_i \mathit{score}_i \times \mathit{grade\_point}_i}{\sum_i 100\times \mathit{grade\_point}_i}
+				      \end{equation}
+				\item \emph{科研潜质}：六大维度
+				\item \emph{社会活动}：优秀学生、优秀志愿者、优秀学生干部等
+				      % 注意为啥是优秀？
+			\end{itemize}
+			按照综合测评成绩排名，每专业取若干名同学授予推免资格。全学院有一定数量候补同学。
+		\end{column}
+
+		\begin{column}{0.6\linewidth}
+			\begin{tikzpicture} % Tikz environment
+				\pie[rotate=30]
+				% it is essential to recheck that the sum of all the components mentioned should be 100%. Otherwise, Latex will leave the left percentage, blank.
+				{60/课程成绩, 35/科研潜质, 5/社会活动}
+			\end{tikzpicture}
+		\end{column}
+	\end{columns}
+\end{frame}
+
+\begin{frame}
+	\frametitle{课程成绩}
+	计算机是工科，学习课本知识和编码实践同样重要。
+
+	推荐网课来源：
+	\begin{enumerate}
+		\item \url{https://csdiy.wiki} 一个国内外名校课程目录，内容涵盖计算机科学方方面面，只有想不到没有学不到
+		\item 中国大学 MOOC
+		\item 哔哩哔哩
+		\item Coursera
+		\item 一些优秀的开源项目，比如 rCore \url{https://rcore-os.cn/}
+	\end{enumerate}
+
+	还有一些优秀的参考资料。中文参考资料往往言简意赅适合备考，英文资料翔实丰富适合自学。
+
+	根据培养计划，计算机学院各专业从大一到大三都有必修课，大一大二学分较多，但大三也有不少。准备保研中，注意平衡课程成绩和其他加分项。一般来说，科研成绩优异的同学，课程成绩也不会差。
+\end{frame}
+
+\begin{frame}
+	\frametitle{科研创新潜质与专业能力倾向}
+	\begin{columns}
+		\begin{column}{0.5\linewidth}
+			\begin{center}
+				\begin{tikzpicture}
+					\newdimen\R
+					\R=2.2cm
+					\draw (0:\R) \foreach \x in {60,120,...,360} {  -- (\x:\R) };
+					\foreach \x/\l/\p in
+					{ 60/{\emph{专业竞赛}}/above,
+					120/{\emph{学术论文}}/above,
+					180/{\emph{科研活动}}/left,
+					240/{\emph{知识产权}}/below,
+					300/{\emph{专业认证}}/below,
+					360/{\emph{科研成果}}/right
+					}
+					\node[inner sep=1pt,circle,draw,fill,label={\p:\l}] at (\x:\R) {};
+				\end{tikzpicture}
+			\end{center}
+		\end{column}
+		\begin{column}{0.5\linewidth}
+			\begin{itemize}
+				\item 各维度评分：令第 $i$ 位学生六个维度的每个维度分别为 $s_{i1}, s_{i2}, \ldots, s_{i6}$，$s_{ij}$ 为第 $j$ 各项目可选成果中 $i$ 生加分最高一项。
+				\item 综合赋分：令 $S_i = \sum_{j=1}^6 s_{ij}$ 为第 $i$ 位参与推免的同学的六个维度评分之和，则该同学在科研潜质板块获得的得分为
+				      \begin{equation}
+					      C_i = \frac{S_i}{\max\{S_1, S_2, \ldots, S_n\}}
+				      \end{equation}
+			\end{itemize}
+		\end{column}
+	\end{columns}
+
+	\footnote{计算机学院科研创新潜质和专业能力倾向成绩计分细则}
+\end{frame}
+
+\begin{frame}
+	\begin{enumerate}
+		\item 专业竞赛：按照参赛范围分为国际级、国家级、省级、校级；根据赛事权威性分为 I、II、III、IV 四级；
+		\item 学术论文：{CCF 期刊会议分级}\footnote{\url{https://www.ccf.org.cn/Academic\_Evaluation/By\_category/}}、川大期刊分级，只认可该生为第一作者、四川大学为论文第一单位的文章；
+		\item 科研活动：按国家级、省级、校级、院级划分，成员的加分是负责人的一半。大创也算科研活动。事实上，很多学生通过大创加上了不少分；
+		\item 知识产权：目前只认可国家发明专利和国际专利。第一署名人90分，其它署名人10分。四川大学必须是第一署名单位和权利人；
+		\item 专业认证：虽然其他国际认证、计算机技术与软件专业技术资格（水平）考试都可以，但 CCF CSP 必须推荐大家准备；
+		\item 科研成果：省部级以上科研成果奖。% 我还没看见有哪个本科生得过这个奖。
+	\end{enumerate}
+\end{frame}
+
+\begin{frame}
+	\frametitle{可选路径}
+	\begin{itemize}
+		\item 科研：大创（科学探索类） $\rightarrow$ 论文 + 专利
+		\item 工程：大创（工程技术类） $\rightarrow$ 专利 + EI 论文
+		\item 竞赛：竞赛 $\rightarrow$ 参与到老师的课题组 $\rightarrow$ 大创 （回到 1、2）
+		\item CSP：竞赛 $\rightarrow$ CCF CSP
+	\end{itemize}
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{社会实践活动}
+
+	\begin{enumerate}
+		\item 优秀学生、优秀学生干部
+		\item 社会活动
+		      \begin{enumerate}
+			      \item 社会实践优秀个人
+			      \item 优秀团员、团干部
+			      \item “百佳”文明班级/寝室/个人
+			      \item 学生组织服务核心工作
+		      \end{enumerate}
+		\item 课外学生活动、非专业类竞赛获奖
+		      \begin{enumerate}
+			      \item 创新创业竞赛
+			      \item 实践操作技能竞赛
+			      \item 演讲赛、辩论赛
+			      \item 文体竞赛
+		      \end{enumerate}
+		\item 校内外公益活动（获校级及以上奖励）
+	\end{enumerate}
+\end{frame}
+
+
+\section{接收院校}
+\topicFramePrimary{接收院校}
+
+\begin{frame}
+	\frametitle{接收情况概述}
+	\emph{夏令营}和\emph{预推免}已经成为推免招生的最主要途径。
+
+	二者由接收院校自行组织\footnote{一般是学校提供平台，学院自己组织内容、组织筛选}。
+
+	夏令营期间，除校领导介绍学校、导师介绍课题组之外，还会对参营学院进行\emph{笔试、面试等考核，颁发《优秀营员》证书}，即获得该学校该专业的推免资格\footnote{不同学校所发证书的名目有所不同，本文中将获得接收推免资格的学生统称为“优秀营员”，简称“优营”。}。
+
+	自疫情开始，夏令营几乎全部为线上进行，但随着防疫政策的动态调整，近几年可能有一部分会转为线下。
+
+	\emph{流程}：资料准备 $\rightarrow$ 信息获取+准备考核 $\rightarrow$ 报名 $\rightarrow$ 参与考核 $\rightarrow$ 系统填报
+\end{frame}
+
+\begin{frame}
+	\frametitle{一些通常说法}
+
+	\begin{itemize}
+		\item pro：Professor，即导师
+		\item com，Committee，即招生委员会
+		\item 强/弱com：指招生委员会与导师在招生上的相对权利
+		\item offer，即录取通知=优营
+		\item wl，Wait list，候补名单
+		\item rk，Rank，即排名
+		\item bar，门槛
+		\item oq，uq，Over Qualified, Under Qualified
+		\item 鸽，放鸽子的简称
+	\end{itemize}
+
+\end{frame}
+
+\begin{frame}{需要准备的材料}
+	\begin{enumerate}
+		\item 基本信息
+		      \begin{enumerate}
+			      \item 成绩排名证明（学院统一出具）
+			      \item 成绩单（教务系统导出）、四六级
+			      \item 个人信息（因为要填很多遍，所以还是整理出来复制粘贴）
+			      \item \emph{申请理由}（要认真写）
+			      \item 联系方式（\emph{务必保证时刻畅通}）
+		      \end{enumerate}
+		\item 科研潜质证明
+		      \begin{enumerate}
+			      \item 奖项证明
+			      \item 专利授权/公开证明
+			      \item 论文接收证明及全文
+		      \end{enumerate}
+		\item 其他证明材料
+		      \begin{enumerate}
+			      \item （可能，视接收院校要求）体检表、政审表
+			      \item （部分学校需要一两封）副高级以上教授推荐信
+			      \item （部分直博需要）攻读博士期间科研计划
+		      \end{enumerate}
+	\end{enumerate}
+\end{frame}
+
+\begin{frame}
+	\frametitle{提前了解老师}
+
+	如果已经有希望从事的研究方向，可以提前找对应方向的老师进行沟通：
+
+	\begin{enumerate}
+		\item 在一些“强com”学校，通过委员会选拔之后，再与老师联系即可；
+		\item 一些“强pro”学校，提前和老师联系，可能会对选拔有帮助。
+	\end{enumerate}
+
+	在本科期间，做的大创、研究中，经常会关注某学者的研究，以这样的学者为目标，对自己的发展也是有好处的。
+
+	如果希望加入优秀导师的课题组，还是应该在前几年\emph{在相关研究领域有所成果}，至少是有一定理解。
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{信息获取}
+
+	主要途径有
+	\begin{itemize}
+		\item 学院官网：最佳信息渠道。消息权威，但数量众多，可以将自己感兴趣的几个学院设置为浏览器主页；
+		\item 微信公众号：一些公众号会推送近期保研资讯汇总，也有专门针对计算机学生的公众号；
+		\item GitHub：一些仓库会更新夏令营、预推免信息。既然是GitHub那必然是专门针对计软网相关学生的；
+		\item 同学分享、往届学长等。
+	\end{itemize}
+
+	\emph{DEADLINE 很重要！！！不要因为错过DDL而与梦校失之交臂！！！}
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{准备考核}
+
+	% 现在本科通过不懈努力，获得成果的学生很多，简单说就是很“卷”。所以也相应地测试难度也提高了，笔试会考比较难的算法题，面试也会问一些专业性很强的问题。
+
+	一般情况下，学院组织统一考核，同期导师/课题组也会单独进行考核。
+
+	笔试/面试前，找好一个安静的角落，确定不会被打扰（在校生，宿舍最好\footnote{也体现了与舍友搞好关系的重要性}）
+
+	\begin{center}
+		\begin{columns}
+			\begin{column}{0.4\linewidth}
+				笔试：
+				\begin{enumerate}
+					\item 刷题练习：力扣、牛客、PTA、CodeForces；
+					\item Online Judge
+					\item 北航可以用 CSP C/C++ 申请免试。
+				\end{enumerate}
+			\end{column}
+
+			\begin{column}{0.4\linewidth}
+				面试：
+				\begin{enumerate}
+					\item 做一个简单的 PPT
+					\item 针对项目提问
+					\item 专业基础知识
+					\item 英语能力测试
+					\item 未来科研计划
+				\end{enumerate}
+			\end{column}
+		\end{columns}
+	\end{center}
+	\emph{夏令营/预推免前后一段时间，务必保证预留的联系方式24小时畅通！！！随时准备接收考核相关通知！！！}
+	% 手机时刻充电，充电宝随时待命
+\end{frame}
+
+\begin{frame}
+	\frametitle{填报}
+
+	经过夏令营和预推免，学校公布推免名单后，学生应该已经拿到了心仪的 offer。
+
+	本来系统的意图是方便学校考核，结果学校自己考核，系统反而成了形式。
+
+	几乎所有工作都是在9月28日一天之内完成的。
+
+	系统开放填报前一周，获得推免资格的学生可以进入系统填写个人信息。
+
+	系统开放后，可以报三个意向 $\rightarrow$ 招生单位通知复试 $\rightarrow$ 学生接受复试通知 $\rightarrow$ 学校发放预录取通知\footnote{注意这里根本没有进行复试} $\rightarrow$ 学生接受预录取通知，学生不能主动修改 $\rightarrow$ 提交政审表、体检表等后续材料
+
+\end{frame}
+
+\begin{frame}{科研与工程}{多说两句}
+
+研究更多是在探索未知
+
+工程更多是使用现有技术制造
+
+研究具有探索性和不确定性，过程比较枯燥，需要学生有一定灵感
+\end{frame}
+
+\begin{frame}{学硕、专硕与直博}{多说几句}
+	\begin{enumerate}
+		\item 学术型研究生（学硕）以培养科研人员为主，学习偏向于理论和学术研究；
+		\item 专业型研究生（专硕）与学硕处于同一层次，主要是培养特定行业或者特定岗位需求的专业技术型人才。
+		\item 博士具备产出原创成果的能力。
+	\end{enumerate}
+\end{frame}
+
+\section{The End}
+\begin{frame}
+	\frametitle{The End}
+	\centering{Thanks for your attention!}
+
+	\centering{Source for the talk: \url{https://github.com/Dandelight/scu_2022_baoyan_talk}}
+\end{frame}
+
+\if0
+
+\begin{frame}[fragile]
+	\sidebysideright{
+		Configure colors in \texttt{src/config.lua}. Hex color codes are used.
+
+		Colors are exported in the \texttt{src/beamerthemematerial.sty} file.
+	}{
+		{\Large Mandatory colors}
+
+		\begin{itemize}
+			\item[\textcolor{primary-color-text}{\textbullet}] \color{primary-color-text}{Primary}
+			\item[\textcolor{secondary-color-text}{\textbullet}] \color{secondary-color-text}{Secondary}
+			\item[\textcolor{accent-color}{\textbullet}] \color{accent-color}{Accent}
+			\item[\textcolor{bgcolor-01}{\textbullet}] \color{bgcolor-01}{Background-01}
+			\item[\textcolor{bgcolor-02}{\textbullet}] \color{bgcolor-02}{Background-02}
+			\item[\textcolor{bgcolor-03}{\textbullet}] \color{bgcolor-03}{Background-03}
+			\item[\textcolor{bgcolor-04}{\textbullet}] \color{bgcolor-04}{Background-04}
+		\end{itemize}
+	}
+	{halign=center, valign=center}
+	{halign=center, valign=center}
+\end{frame}
+
+\topicFramePrimary{Features}
+\begin{frame}
+	\frametitle{Laplacian Eigenmaps}
+
+	\section{Introduction}
+
+	Consider the manifold unfolding problem again: Given a set of points in a high dimensional Euclidean space but along a manifold, $\mathbf{x}$
+\end{frame}
+
+\begin{frame}
+	\sidebysideleft[0.7]{
+		Adjust ratio of the layout with the optional parameter.
+		Defaults to half of the page.
+	}{
+		Right Side
+	}
+	{halign=center, valign=center}
+	{halign=center, valign=center}
+\end{frame}
+
+\begin{frame}
+	\sidebysideright[0.3]{
+		Left Side
+	}{
+		Right Side\\
+		A very important statement
+		\begin{equation*}
+			a^2 + b^2 = c^2
+		\end{equation*}
+	}
+	{halign=center, valign=center}
+	{halign=center, valign=center}
+\end{frame}
+
+
+\section{Usage}
+\topicFramePrimary[Explaining how things work]{Usage}
+\topicFrameSecondary{Usage}
+\subsection{Slides with code}
+\begin{frame}[fragile=singleslide]{Code}
+	\begin{lstlisting}
+def someFunction(x):
+	return x*2
+
+someFunction(2)
+\end{lstlisting}
+\end{frame}
+
+\begin{frame}
+	\frametitle{拉普拉斯特征映射}
+
+	\begin{equation}
+		\min _{\mathbf{f} \in \mathbb{R}^n:\|\mathbf{f}\|=1} \frac{1}{2} \sum_{i, j} w_{i j}\left(f_i-f_j\right)^2, \quad \text { or } \min _{\mathbf{f} \neq \mathbf{0} \in \mathbb{R}^n} \frac{\frac{1}{2} \sum_{i, j} w_{i j}\left(f_i-f_j\right)^2}{\sum_i f_i^2}
+	\end{equation}
+
+\end{frame}
+
+\subsection{Images with a source}
+\begin{frame}
+	\frametitle{Including Images}
+	\begin{figure}
+		\centering
+		% \includegraphics[width=0.8\textwidth]{images/tensorflow.pdf}
+		\source{Google.com}
+		\caption{TensorFlow logo}
+	\end{figure}
+\end{frame}
+
+\begin{frame}{Basic Blocks Example}
+	\begin{block}{Standard block}
+		Observation through sound or listening can tell us about our surrounding environment.
+	\end{block}
+	\begin{alertblock}{Alert block}
+		A-weighting mirrors the range of hearing, with frequencies of 20 Hz to 20,000 Hz.
+	\end{alertblock}
+	\begin{exampleblock}{Example block}
+		Recommendations for leisure noise in 2018 were conditional and based on the equivalent sound pressure level during an average 24 hour period in a year without weights for nighttime noise.
+	\end{exampleblock}
+\end{frame}
+\fi
+
+\end{document}
