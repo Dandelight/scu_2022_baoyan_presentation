@@ -40,9 +40,9 @@
 	\frametitle{为什么要读研}
 
 	\begin{itemize}
+		\item 国家、社会对高水平人才的需求
 		\item 对学术的热爱
 		\item 提升自身实力
-		\item 社会对学位的认可与要求
 	\end{itemize}
 
 \end{frame}
@@ -162,6 +162,7 @@
 			\end{center}
 		\end{column}
 		\begin{column}{0.5\linewidth}
+			设共有 $n$ 名同学参与推免，
 			\begin{itemize}
 				\item 各维度评分：令第 $i$ 位学生六个维度的每个维度分别为 $s_{i1}, s_{i2}, \ldots, s_{i6}$，$s_{ij}$ 为第 $j$ 各项目可选成果中 $i$ 生加分最高一项。
 				\item 综合赋分：令 $S_i = \sum_{j=1}^6 s_{ij}$ 为第 $i$ 位参与推免的同学的六个维度评分之和，则该同学在科研潜质板块获得的得分为
@@ -188,11 +189,38 @@
 
 \begin{frame}
 	\frametitle{可选路径}
+	\vspace{-2em}
+	\begin{columns}
+		\begin{column}{0.6\linewidth}
+			\begin{figure}
+				\centering
+				\includegraphics[width=1\linewidth]{achievements.pdf}
+			\end{figure}
+		\end{column}
+		\begin{column}{0.4\linewidth}
+			\begin{itemize}
+				\item 科研：大创（科学探索类） $\rightarrow$ 论文 + 专利
+				\item 工程：大创（工程技术类） $\rightarrow$ 专利 + EI 论文
+				\item 竞赛：竞赛 $\rightarrow$ 参与到老师的课题组 $\rightarrow$ 大创 （回到上边两点）
+				\item \phantom{竞赛：} $\rightarrow$ CCF CSP
+			\end{itemize}
+		\end{column}
+	\end{columns}
+\end{frame}
+
+\begin{frame}
+	\frametitle{可能的研究方向}
+
 	\begin{itemize}
-		\item 科研：大创（科学探索类） $\rightarrow$ 论文 + 专利
-		\item 工程：大创（工程技术类） $\rightarrow$ 专利 + EI 论文
-		\item 竞赛：竞赛 $\rightarrow$ 参与到老师的课题组 $\rightarrow$ 大创 （回到 1、2）
-		\item CSP：竞赛 $\rightarrow$ CCF CSP
+		\item 系统工程
+		\item 人工智能
+		\item 编译器与编程语言
+		\item 数据库/数据挖掘/内容检索
+		\item 网络
+		\item 信息系统安全
+		\item 图形学与多媒体
+		\item 系统结构
+		\item 计算机科学理论
 	\end{itemize}
 
 \end{frame}
@@ -238,6 +266,19 @@
 \end{frame}
 
 \begin{frame}
+	\frametitle{选择}
+
+	对于选择学校、导师、方向，每个人有不同的优先级
+
+	\begin{itemize}
+		\item 导师：研究方向、研究成果、对学生投入
+		\item 个人：理想志趣、生涯规划、感兴趣方向
+		\item 学校：科研环境、所处城市
+	\end{itemize}
+	都是可以影响选择的因素。
+\end{frame}
+
+\begin{frame}
 	\frametitle{一些通常说法}
 
 	\begin{itemize}
@@ -278,6 +319,7 @@
 		      \end{enumerate}
 	\end{enumerate}
 \end{frame}
+
 
 \begin{frame}
 	\frametitle{提前了解老师}
@@ -361,19 +403,25 @@
 
 \end{frame}
 
+
+
 \begin{frame}{科研与工程}{多说两句}
 
-研究更多是在探索未知
+	研究的结果具有确定性，但是研究的过程具有探索性不确定性；
 
-工程更多是使用现有技术制造
+	研究的具体过程具有挑战性，需要学生有一定灵感与能力
 
-研究具有探索性和不确定性，过程比较枯燥，需要学生有一定灵感
+	工程更多是使用现有技术制造；
+
+	研究、工程虽然是相通的，但二者之间还是有一定的距离。
+
+	只是写个小程序、APP、网页，算不上科研，工程也可能算不上。
 \end{frame}
 
 \begin{frame}{学硕、专硕与直博}{多说几句}
 	\begin{enumerate}
 		\item 学术型研究生（学硕）以培养科研人员为主，学习偏向于理论和学术研究；
-		\item 专业型研究生（专硕）与学硕处于同一层次，主要是培养特定行业或者特定岗位需求的专业技术型人才。
+		\item 专业型研究生（专硕）与学硕处于同一层次，主要是培养特定行业或者特定岗位需求的专业技术型人才；
 		\item 博士具备产出原创成果的能力。
 	\end{enumerate}
 \end{frame}
@@ -383,112 +431,114 @@
 	\frametitle{The End}
 	\centering{Thanks for your attention!}
 
-	\centering{Source for the talk: \url{https://github.com/Dandelight/scu_2022_baoyan_talk}}
+	\centering{Source for the talk:
+
+	\url{https://github.com/Dandelight/scu_2022_baoyan_talk}}
 \end{frame}
 
 \if0
 
-\begin{frame}[fragile]
-	\sidebysideright{
-		Configure colors in \texttt{src/config.lua}. Hex color codes are used.
+	\begin{frame}[fragile]
+		\sidebysideright{
+			Configure colors in \texttt{src/config.lua}. Hex color codes are used.
 
-		Colors are exported in the \texttt{src/beamerthemematerial.sty} file.
-	}{
-		{\Large Mandatory colors}
+			Colors are exported in the \texttt{src/beamerthemematerial.sty} file.
+		}{
+			{\Large Mandatory colors}
 
-		\begin{itemize}
-			\item[\textcolor{primary-color-text}{\textbullet}] \color{primary-color-text}{Primary}
-			\item[\textcolor{secondary-color-text}{\textbullet}] \color{secondary-color-text}{Secondary}
-			\item[\textcolor{accent-color}{\textbullet}] \color{accent-color}{Accent}
-			\item[\textcolor{bgcolor-01}{\textbullet}] \color{bgcolor-01}{Background-01}
-			\item[\textcolor{bgcolor-02}{\textbullet}] \color{bgcolor-02}{Background-02}
-			\item[\textcolor{bgcolor-03}{\textbullet}] \color{bgcolor-03}{Background-03}
-			\item[\textcolor{bgcolor-04}{\textbullet}] \color{bgcolor-04}{Background-04}
-		\end{itemize}
-	}
-	{halign=center, valign=center}
-	{halign=center, valign=center}
-\end{frame}
+			\begin{itemize}
+				\item[\textcolor{primary-color-text}{\textbullet}] \color{primary-color-text}{Primary}
+				\item[\textcolor{secondary-color-text}{\textbullet}] \color{secondary-color-text}{Secondary}
+				\item[\textcolor{accent-color}{\textbullet}] \color{accent-color}{Accent}
+				\item[\textcolor{bgcolor-01}{\textbullet}] \color{bgcolor-01}{Background-01}
+				\item[\textcolor{bgcolor-02}{\textbullet}] \color{bgcolor-02}{Background-02}
+				\item[\textcolor{bgcolor-03}{\textbullet}] \color{bgcolor-03}{Background-03}
+				\item[\textcolor{bgcolor-04}{\textbullet}] \color{bgcolor-04}{Background-04}
+			\end{itemize}
+		}
+		{halign=center, valign=center}
+		{halign=center, valign=center}
+	\end{frame}
 
-\topicFramePrimary{Features}
-\begin{frame}
-	\frametitle{Laplacian Eigenmaps}
+	\topicFramePrimary{Features}
+	\begin{frame}
+		\frametitle{Laplacian Eigenmaps}
 
-	\section{Introduction}
+		\section{Introduction}
 
-	Consider the manifold unfolding problem again: Given a set of points in a high dimensional Euclidean space but along a manifold, $\mathbf{x}$
-\end{frame}
+		Consider the manifold unfolding problem again: Given a set of points in a high dimensional Euclidean space but along a manifold, $\mathbf{x}$
+	\end{frame}
 
-\begin{frame}
-	\sidebysideleft[0.7]{
-		Adjust ratio of the layout with the optional parameter.
-		Defaults to half of the page.
-	}{
-		Right Side
-	}
-	{halign=center, valign=center}
-	{halign=center, valign=center}
-\end{frame}
+	\begin{frame}
+		\sidebysideleft[0.7]{
+			Adjust ratio of the layout with the optional parameter.
+			Defaults to half of the page.
+		}{
+			Right Side
+		}
+		{halign=center, valign=center}
+		{halign=center, valign=center}
+	\end{frame}
 
-\begin{frame}
-	\sidebysideright[0.3]{
-		Left Side
-	}{
-		Right Side\\
-		A very important statement
-		\begin{equation*}
-			a^2 + b^2 = c^2
-		\end{equation*}
-	}
-	{halign=center, valign=center}
-	{halign=center, valign=center}
-\end{frame}
+	\begin{frame}
+		\sidebysideright[0.3]{
+			Left Side
+		}{
+			Right Side\\
+			A very important statement
+			\begin{equation*}
+				a^2 + b^2 = c^2
+			\end{equation*}
+		}
+		{halign=center, valign=center}
+		{halign=center, valign=center}
+	\end{frame}
 
 
-\section{Usage}
-\topicFramePrimary[Explaining how things work]{Usage}
-\topicFrameSecondary{Usage}
-\subsection{Slides with code}
-\begin{frame}[fragile=singleslide]{Code}
-	\begin{lstlisting}
+	\section{Usage}
+	\topicFramePrimary[Explaining how things work]{Usage}
+	\topicFrameSecondary{Usage}
+	\subsection{Slides with code}
+	\begin{frame}[fragile=singleslide]{Code}
+		\begin{lstlisting}
 def someFunction(x):
 	return x*2
 
 someFunction(2)
 \end{lstlisting}
-\end{frame}
+	\end{frame}
 
-\begin{frame}
-	\frametitle{拉普拉斯特征映射}
+	\begin{frame}
+		\frametitle{拉普拉斯特征映射}
 
-	\begin{equation}
-		\min _{\mathbf{f} \in \mathbb{R}^n:\|\mathbf{f}\|=1} \frac{1}{2} \sum_{i, j} w_{i j}\left(f_i-f_j\right)^2, \quad \text { or } \min _{\mathbf{f} \neq \mathbf{0} \in \mathbb{R}^n} \frac{\frac{1}{2} \sum_{i, j} w_{i j}\left(f_i-f_j\right)^2}{\sum_i f_i^2}
-	\end{equation}
+		\begin{equation}
+			\min _{\mathbf{f} \in \mathbb{R}^n:\|\mathbf{f}\|=1} \frac{1}{2} \sum_{i, j} w_{i j}\left(f_i-f_j\right)^2, \quad \text { or } \min _{\mathbf{f} \neq \mathbf{0} \in \mathbb{R}^n} \frac{\frac{1}{2} \sum_{i, j} w_{i j}\left(f_i-f_j\right)^2}{\sum_i f_i^2}
+		\end{equation}
 
-\end{frame}
+	\end{frame}
 
-\subsection{Images with a source}
-\begin{frame}
-	\frametitle{Including Images}
-	\begin{figure}
-		\centering
-		% \includegraphics[width=0.8\textwidth]{images/tensorflow.pdf}
-		\source{Google.com}
-		\caption{TensorFlow logo}
-	\end{figure}
-\end{frame}
+	\subsection{Images with a source}
+	\begin{frame}
+		\frametitle{Including Images}
+		\begin{figure}
+			\centering
+			% \includegraphics[width=0.8\textwidth]{images/tensorflow.pdf}
+			\source{Google.com}
+			\caption{TensorFlow logo}
+		\end{figure}
+	\end{frame}
 
-\begin{frame}{Basic Blocks Example}
-	\begin{block}{Standard block}
-		Observation through sound or listening can tell us about our surrounding environment.
-	\end{block}
-	\begin{alertblock}{Alert block}
-		A-weighting mirrors the range of hearing, with frequencies of 20 Hz to 20,000 Hz.
-	\end{alertblock}
-	\begin{exampleblock}{Example block}
-		Recommendations for leisure noise in 2018 were conditional and based on the equivalent sound pressure level during an average 24 hour period in a year without weights for nighttime noise.
-	\end{exampleblock}
-\end{frame}
+	\begin{frame}{Basic Blocks Example}
+		\begin{block}{Standard block}
+			Observation through sound or listening can tell us about our surrounding environment.
+		\end{block}
+		\begin{alertblock}{Alert block}
+			A-weighting mirrors the range of hearing, with frequencies of 20 Hz to 20,000 Hz.
+		\end{alertblock}
+		\begin{exampleblock}{Example block}
+			Recommendations for leisure noise in 2018 were conditional and based on the equivalent sound pressure level during an average 24 hour period in a year without weights for nighttime noise.
+		\end{exampleblock}
+	\end{frame}
 \fi
 
 \end{document}
